@@ -27,7 +27,7 @@ function HomePage() {
       id: 9, 
       name: '3 Joint Flex Tap', 
       price: 299.99, 
-      image: 'public/Taps/3 Joint Flex Tap.jpg',
+      image: '3 Joint Flex Tap.jpg',
       rating: 4.1, 
       category: 'Plumbing', 
       brand: 'Black+Decker', 
