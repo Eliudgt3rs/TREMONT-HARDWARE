@@ -222,33 +222,40 @@ function HomePage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProducts.map(product => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg duration-500 hover:scale-105">
-                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  
-                    <img src={ product.image } alt="" />
-                  
-                  <div className="absolute top-2 right-2 bg-yellow-500 text-xs font-bold uppercase rounded-full py-1 px-2">
-                    {product.category}
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold text-gray-800">Ksh{product.price}</span>
-                    <a href={`https://wa.me/254700761283?text=Hello,%20I%20would%20like%20to%20buy%20the%20product:%20${product.name}%20of%20${product.brand}%20Brand%20for%20KES${product.price}%20.Thank%20You.`}
-                       target="_blank"
-                       rel="noopener"
-                       className="w-fit flex items-center justify-center px-4 py-2 bg-green-500 text-white font-semibold rounded-4xl shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.105 1.523 5.84L0 24l6.293-1.523A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.29 17.71c-.26.73-1.52 1.39-2.09 1.48-.55.09-1.22.13-1.97-.15-.45-.17-1.03-.35-1.77-.68-3.1-1.34-5.1-4.5-5.26-4.71-.15-.21-1.26-1.68-1.26-3.21 0-1.53.8-2.29 1.08-2.61.26-.31.57-.39.77-.39.2 0 .39.002.56.01.18.01.42-.07.66.51.26.61.88 2.1.96 2.25.08.15.13.33.03.53-.09.2-.13.33-.26.51-.13.18-.27.39-.39.52-.13.13-.26.27-.11.52.15.26.67 1.1 1.44 1.78.99.88 1.83 1.15 2.08 1.28.26.13.41.11.56-.08.15-.18.65-.76.82-1.02.18-.26.36-.22.61-.13.26.08 1.67.79 1.96.93.29.13.48.22.55.34.08.13.08.75-.18 1.48z"/>
-                      </svg>
-                      WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+  <div
+    key={product.id}
+    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg duration-500 hover:scale-105"
+  >
+    <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="h-full w-full object-cover"
+      />
+      <div className="absolute top-2 right-2 bg-yellow-500 text-xs font-bold uppercase rounded-full py-1 px-2">
+        {product.category}
+      </div>
+    </div>
+    <div className="p-4">
+      <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+      <div className="flex justify-between items-center">
+        <span className="text-xl font-bold text-gray-800">Ksh{product.price}</span>
+        <a
+          href={`https://wa.me/254700761283?text=Hello,%20I%20would%20like%20to%20buy%20the%20product:%20${product.name}%20of%20${product.brand}%20Brand%20for%20KES${product.price}%20.Thank%20You.`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-fit flex items-center justify-center px-4 py-2 bg-green-500 text-white font-semibold rounded-4xl shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.105 1.523 5.84L0 24l6.293-1.523A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.29 17.71c-.26.73-1.52 1.39-2.09 1.48-.55.09-1.22.13-1.97-.15-.45-.17-1.03-.35-1.77-.68-3.1-1.34-5.1-4.5-5.26-4.71-.15-.21-1.26-1.68-1.26-3.21 0-1.53.8-2.29 1.08-2.61.26-.31.57-.39.77-.39.2 0 .39.002.56.01.18.01.42-.07.66.51.26.61.88 2.1.96 2.25.08.15.13.33.03.53-.09.2-.13.33-.26.51-.13.18-.27.39-.39.52-.13.13-.26.27-.11.52.15.26.67 1.1 1.44 1.78.99.88 1.83 1.15 2.08 1.28.26.13.41.11.56-.08.15-.18.65-.76.82-1.02.18-.26.36-.22.61-.13.26.08 1.67.79 1.96.93.29.13.48.22.55.34.08.13.08.75-.18 1.48z" />
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </section>
