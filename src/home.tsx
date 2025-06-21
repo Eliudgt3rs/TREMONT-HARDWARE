@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin, ArrowRight, Facebook, Instagram, Twitter, ChevronUp, Paintbrush, Wrench, Hammer, Shield, Wallpaper, Package, Key, Palette, Settings } from 'lucide-react';
+import { image } from 'html2canvas/dist/types/css/types/image';
 
 function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,6 +27,7 @@ function HomePage() {
       id: 9, 
       name: '3 Joint Flex Tap', 
       price: 299.99, 
+      image: 'public/Taps/3 Joint Flex Tap.jpg',
       rating: 4.1, 
       category: 'Plumbing', 
       brand: 'Black+Decker', 
