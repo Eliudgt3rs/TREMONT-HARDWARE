@@ -224,7 +224,7 @@ function HomePage() {
             {featuredProducts.map(product => (
               <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg duration-500 hover:scale-105">
                 <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <Wrench size={80} className="text-gray-400" />
+                  <div key={product.image} className=""></div>
                   <div className="absolute top-2 right-2 bg-yellow-500 text-xs font-bold uppercase rounded-full py-1 px-2">
                     {product.category}
                   </div>
